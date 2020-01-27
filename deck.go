@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt" 
+	"strings"
+)
+
 type deck []string
 
 func newDeck() deck {
@@ -27,4 +31,9 @@ func deal(d deck, handSize int) (deck, deck){
 	fmt.Println()
 
 	return d[:handSize], d[handSize:]
+}
+
+// Converts deck to a single string
+func (d deck) toString() string {
+		return strings.Join([]string(d), ",")
 }
