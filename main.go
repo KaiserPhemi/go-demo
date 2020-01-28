@@ -1,10 +1,7 @@
 package main
 
-// import "fmt"
-
+// main
 func main() {
 	cards := newDeck()
-	// cardStrings := cards.toString()
 	cards.saveToFile("my_cards")
-
 }
